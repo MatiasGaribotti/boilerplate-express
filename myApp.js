@@ -7,9 +7,13 @@ console.log("Hello World");
     //res.send("Hello Express");
 //});
 
+//Middleware for static stylesheet
+app.use('/public', express.static(__dirname + '/public/style.css'));
+
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
+
 
 
 
